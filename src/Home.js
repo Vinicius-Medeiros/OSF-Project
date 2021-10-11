@@ -51,6 +51,7 @@ const Home = () => {
                         <img src={"./images/pokemontypes/" + pokemon.type1 + ".png"}/>
                         <img src={"./images/pokemontypes/" + pokemon.type2 + ".png"}/>
                     </div>
+                    <hr className="pokemon-types-images-diviser"/>
                 </div>
             ))}
         </div>
