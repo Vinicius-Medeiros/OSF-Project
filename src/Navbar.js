@@ -9,6 +9,7 @@ const Navbar = () => {
             <img src="./images/navbarImages/pokemonball.png" alt="pokemon ball"/>
         </div>
           <a href="/create"><h2 className="home-link">Home</h2></a>
+          &nbsp; &nbsp;
           <a href="/create"><h2 className="add-link">Add new pokemons</h2></a>
       </nav>
     );
