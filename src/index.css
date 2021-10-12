@@ -4,12 +4,12 @@
     margin: 0;
     font-family: "Quicksand";
     color: #333;
+    box-sizing: border-box;
 }
 
 body {
-    border-left: 150px solid yellow;
-    border-right: 150px solid yellow;
-    height: auto;
+    background-color: yellow;
+    height: 100%;
 }
 
 .navbar {
@@ -48,14 +48,12 @@ body {
     color: yellow;
     border-radius: 8px;
     padding: 6px;
-    height: 100%;
 }
 
 .home-link:hover {
     position: relative;
     top: 4px;
     color: white;
-    height: 100%;
 }
 
 .add-link {
@@ -65,21 +63,15 @@ body {
     border-radius: 8px;
     padding-left: 5px;
     padding: 6px;
-    height: 100%;
 }
 
 .add-link:hover {
     position: relative;
     top: 4px;
     color: white;
-    height: 100%;
 }
 
-.home {
-    padding-bottom: 70px;
-    height: auto;
-    width: auto;
-}
+
 
 .home-title {
     text-align: center;
@@ -95,49 +87,223 @@ body {
     text-align: center;
     border-radius: 8px;
     background-color: rgb(5, 5, 158);
-    height: 100%;
     width: 100%;
+}
+.navbar {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+.home {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-bottom: 70px;
+}
+
+.pokemon-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 180px);
+    justify-content: space-between;
+    grid-gap: 20px;
+    padding: 35px;
+    background-color: white;
 }
 
 .pokemon-preview {
-    display: inline-block;
-    align-content: center;
     text-align: center;
-    margin-left: 16px;
-    margin-right: 8px;
-    margin-bottom: 30px;
-    width: 150px;
+    border: 2px solid rgb(5, 5, 158);
     padding-bottom: 30px;
-    border: 2px solid rgb(5, 5, 158);
     border-radius: 10px;
-    height: 100%;
-}
-
-.pokemon-types {
-    text-align: left; 
-    height: 100%;
-    width: 100%;
-}
-
-.pokemon-types-diviser {
-    border: 2px solid rgb(5, 5, 158);
-    height: 100%;
-}
-
-.pokemon-types-images {
-    align-content: flex-end;
-    height: 100%;
-    width: 100%;
-}
-
-.pokemon-types-images-diviser {
-    border: 2px solid rgb(5, 5, 158);
-    height: 100%;    
+    background-color: lightgray;
 }
 
 .pokemon-preview:hover {
+    position: relative;
+    top: -15px;
     box-shadow: 0px 8px 12px rgb(5, 5, 158);
-    height: 100%;
+}
+
+.pokemon-types {
+    display: flex;
+    text-align: left; 
+    width: 100%;
+}
+
+.pokemon-types-title-divider {
+    border: 2px solid rgb(5, 5, 158);
+}
+
+.pokemon-types-title {
+    text-align: left;
+}
+
+.pokemon-types-divider {
+    border: 2px solid rgb(5, 5, 158);
+}
+
+.poke-type__item {
+    padding: 10px;
+    margin: 10px auto;
+    max-width: 100px;
+    font-weight: bold;
+}
+
+.poke-type__bug {
+    background-color: green;
+    border: 2px solid green;
+    border-radius: 10px;
+    padding: 3px 10px;
+    color: white;
+}
+
+.poke-type__fire {
+    background-color: red;
+    border: 2px solid red;
+    border-radius: 10px;
+    padding: 3px 10px;
+    color: white;
+}
+
+.poke-type__poison {
+    background-color: rgb(138, 224, 8);
+    border: 2px solid rgb(138, 224, 8);
+    border-radius: 10px;
+    padding: 3px 10px;
+    color: white;
+}
+
+.poke-type__grass {
+    background-color: rgb(82, 221, 82);
+    border: 2px solid rgb(82, 221, 82); 
+    border-radius: 10px;
+    padding: 3px 10px;
+    color: white;
+}
+
+.poke-type__fairy {
+    background-color: rgb(201, 111, 126);
+    border: 2px solid rgb(201, 111, 126);   
+    border-radius: 10px;
+    padding: 3px 10px;
+    color: white;
+}
+
+.poke-type__flying {
+    background-color: rgb(62, 214, 163);
+    border: 2px solid rgb(62, 214, 163);
+    border-radius: 10px;
+    padding: 3px 10px;
+    color: white;
+}
+
+.poke-type__psychic {
+    background-color: purple;
+    border: 2px solid purple;
+    border-radius: 10px;
+    padding: 3px 10px;
+    color: white;
+}
+
+.poke-type__ice {
+    background-color: rgb(18, 199, 223);
+    border: 2px solid rgb(18, 199, 223);
+    border-radius: 10px;
+    padding: 3px 10px;
+    color: white;
+}
+
+.poke-type__electric {
+    background-color: rgb(224, 224, 45);
+    border: 2px solid rgb(224, 224, 45);
+    border-radius: 10px;
+    padding: 3px 10px;
+    color: white;
+}
+
+.poke-type__dark {
+    background-color: black;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 3px 10px;
+    color: white;
+}
+
+.poke-type__normal {
+    background-color: grey;
+    border: 2px solid grey;
+    border-radius: 10px;
+    padding: 3px 10px;
+    color: white;
+}
+
+.poke-type__ghost {
+    background-color: rgb(156, 53, 156);
+    border: 2px solid rgb(156, 53, 156);
+    border-radius: 10px;
+    padding: 3px 10px;
+    color: white;
+}
+
+.poke-type__dragon {
+    background-color: gold;
+    border: 2px solid gold;
+    border-radius: 10px;
+    padding: 3px 10px;
+    color: white;
+}
+
+.poke-type__fighting {
+    background-color: rgb(160, 14, 14);
+    border: 2px solid rgb(160, 14, 14);
+    border-radius: 10px;
+    padding: 3px 10px;
+    color: white;
+}
+
+.poke-type__ground {
+    background-color: rgb(253, 115, 2);
+    border: 2px solid rgb(253, 115, 2);
+    border-radius: 10px;
+    padding: 3px 10px;
+    color: white;
+}
+
+.poke-type__steel {
+    background-color: rgb(134, 98, 98);
+    border: 2px solid rgb(134, 98, 98);
+    border-radius: 10px;
+    padding: 3px 10px;
+    color: white;
+}
+
+.poke-type__rock {
+    background-color: rgb(85, 75, 75);
+    border: 2px solid rgb(85, 75, 75);
+    border-radius: 10px;
+    padding: 3px 10px;
+    color: white;
+}
+
+.poke-type__water {
+    background-color: blue;
+    border: 2px solid blue;
+    border-radius: 10px;
+    padding: 3px 10px;
+    color: white;
+}
+
+@media screen and (max-width: 767px) {
+    body {
+        border: none;
+    }
+
+    .home {
+        padding: 20px;
+    }
+
+    .pokemon-list {
+        grid-template-columns: repeat(auto-fill, 250px);
+        justify-content: center;
+    }
 }
 
 @media screen and (max-width: 1600px) {
@@ -175,7 +341,20 @@ body {
         padding-bottom: 20px;
         width: 25%;
         height: 25%;
-
     }
-    
+
+    .home-title {
+        text-align: center;
+        color: yellow;
+        border-radius: 8px;
+        height: auto;
+        width: auto;
+        font-size: 15px;
+    }
+
+    .home {
+        padding-bottom: 70px;
+        height: auto;
+        width: auto;
+    }
 }
