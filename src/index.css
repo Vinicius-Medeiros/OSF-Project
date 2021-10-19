@@ -21,7 +21,10 @@ body {
     background-color: yellow;
     height: auto;
     width: auto;
-    position: relative;
+}
+
+.navbar a{
+    text-decoration: none;
 }
 
 .navbar-title {
@@ -35,9 +38,7 @@ body {
 }
 
 .imgNavbar {
-    display: block;
     margin: 0 auto;
-    margin-top: 0 auto;
     padding-bottom: 20px;
     height: 100%;
 }
@@ -71,8 +72,6 @@ body {
     color: white;
 }
 
-
-
 .home-title {
     text-align: center;
     background-color: rgb(5, 5, 158);
@@ -89,17 +88,31 @@ body {
     background-color: rgb(5, 5, 158);
     width: 100%;
 }
+
+.pokeImg {
+    padding-top: 10px;
+}
+
 .navbar {
     max-width: 1280px;
     margin: 0 auto;
 }
+
 .home {
     max-width: 1280px;
     margin: 0 auto;
     padding-bottom: 70px;
 }
 
-.pokemon-list {
+.msgLoading {
+    text-align: center;
+    color: yellow;
+    border-radius: 8px;
+    background-color: rgb(5, 5, 158);
+    width: 100%;
+}
+
+.Pokemon-List-Preview {
     display: grid;
     grid-template-columns: repeat(auto-fill, 180px);
     justify-content: space-between;
@@ -108,7 +121,11 @@ body {
     background-color: white;
 }
 
-.pokemon-preview {
+.Pokemon-List-Preview a {
+    text-decoration: none;
+}
+
+.pokemon-card-preview {
     text-align: center;
     border: 2px solid rgb(5, 5, 158);
     padding-bottom: 30px;
@@ -116,7 +133,7 @@ body {
     background-color: lightgray;
 }
 
-.pokemon-preview:hover {
+.pokemon-card-preview:hover {
     position: relative;
     top: -15px;
     box-shadow: 0px 8px 12px rgb(5, 5, 158);
@@ -289,6 +306,192 @@ body {
     border-radius: 10px;
     padding: 3px 10px;
     color: white;
+}
+
+.pokemon-details {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-bottom: 70px;
+    background-color: white;
+    border: 10px solid rgb(5, 5, 158);
+    border-radius: 8px;
+}
+
+.pokemon-details-title {
+    text-align: center;
+    color: yellow;
+    background-color: rgb(5, 5, 158);
+}
+
+.BackButton {
+    text-align: left;
+    background-color: rgb(5, 5, 158);
+    color: yellow;
+    border-radius: 8px;
+    padding: 6px;
+}
+
+.BackButton:active {
+    position: relative;
+    top: 4px;
+}
+
+.BackButton-Title {
+    font-weight: bolder;
+    color: yellow;
+}
+
+.BackButton-Title:hover {
+    color: white;
+}
+
+.NewPokemon {
+    align-content: center;
+    text-align: center;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-bottom: 70px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.NewPokemonTitle {
+    color: yellow;
+    text-align: center;
+    border-radius: 8px;
+    background-color: rgb(5, 5, 158);
+    width: 100%;
+}
+
+.PokemonFormName {
+    max-width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+}
+
+.PokemonFormName-Title {
+    width: 350px;
+    color: yellow;
+    text-align: center;
+    border-radius: 8px;
+    background-color: rgb(5, 5, 158);
+    
+}
+
+.PokemonFormInputText {
+    font-weight: bolder;
+    color: yellow;
+    text-align: center;
+    border-radius: 20px;
+    background-color: rgb(5, 5, 158);
+    max-width: 150px;
+}
+
+.PokemonFormType {
+    max-width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+}
+
+.PokemonFormType-Title {
+    width: 350px;
+    color: yellow;
+    text-align: center;
+    border-radius: 8px;
+    background-color: rgb(5, 5, 158);
+}
+
+.SelectButton {
+    width: 150px;
+    text-align: center;
+    font-weight: bolder;
+    color: yellow;
+    background-color: rgb(5, 5, 158);
+    border-radius: 20px;
+}
+
+.select-items {
+    font-weight: bolder;
+    color: yellow;
+}
+
+.PokemonFormType2 {
+    max-width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+}
+
+.PokemonFormType2-Title {
+    width: 350px;
+    color: yellow;
+    text-align: center;
+    border-radius: 8px;
+    background-color: rgb(5, 5, 158);
+}
+
+.PokemonFormImg {
+    max-width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+}
+
+.PokemonFormImg-Title {
+    width: 350px;
+    color: yellow;
+    text-align: center;
+    border-radius: 8px;
+    background-color: rgb(5, 5, 158);
+}
+
+.select-file {
+    width: 320px;
+    font-weight: bolder;
+    color: yellow;
+    border-radius: 15px;
+    background-color: rgb(5, 5, 158);
+}
+
+.Submit {
+    max-width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+}
+
+.SubmiteButton-Title {
+    width: 350px;
+    color: yellow;
+    text-align: center;
+    border-radius: 8px;
+    background-color: rgb(5, 5, 158);
+}
+
+.SubmitButton {
+    width: 150px;
+    font-weight: bolder;
+    color: yellow;
+    border-radius: 15px;
+    background-color: rgb(5, 5, 158);
+}
+
+.SubmitButton:hover {
+    color: white;
+}
+
+.SubmitButton:active {
+    position: relative;
+    top: 4px;
+}
+
+.PreviewNewCard-Title {
+    color: yellow;
+    text-align: center;
+    border-radius: 8px;
+    background-color: rgb(5, 5, 158);
 }
 
 @media screen and (max-width: 767px) {
