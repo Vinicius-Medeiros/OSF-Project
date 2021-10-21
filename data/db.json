@@ -4,7 +4,7 @@
       "title": "Arcanine",
       "types": [
         "fire",
-        null
+        "none"
       ],
       "id": 1
     },
@@ -20,7 +20,7 @@
       "title": "Blastoise",
       "types": [
         "water",
-        null
+        "none"
       ],
       "id": 3
     },
@@ -44,7 +44,7 @@
       "title": "Caterpie",
       "types": [
         "bug",
-        null
+        "none"
       ],
       "id": 6
     },
@@ -60,7 +60,7 @@
       "title": "Charmander",
       "types": [
         "fire",
-        null
+        "none"
       ],
       "id": 8
     },
@@ -68,7 +68,7 @@
       "title": "Charmeleon",
       "types": [
         "fire",
-        null
+        "none"
       ],
       "id": 9
     },
@@ -76,7 +76,7 @@
       "title": "Clefable",
       "types": [
         "fairy",
-        null
+        "none"
       ],
       "id": 10
     },
@@ -116,7 +116,7 @@
       "title": "Kadabra",
       "types": [
         "psychic",
-        null
+        "none"
       ],
       "id": 15
     },
@@ -132,7 +132,7 @@
       "title": "Metapod",
       "types": [
         "bug",
-        null
+        "none"
       ],
       "id": 17
     },
@@ -164,7 +164,7 @@
       "title": "Pikachu",
       "types": [
         "electric",
-        null
+        "none"
       ],
       "id": 21
     },
@@ -172,7 +172,7 @@
       "title": "Ponyta",
       "types": [
         "fire",
-        null
+        "none"
       ],
       "id": 22
     },
@@ -180,7 +180,7 @@
       "title": "Raichu",
       "types": [
         "electric",
-        null
+        "none"
       ],
       "id": 23
     },
@@ -188,7 +188,7 @@
       "title": "Raticate",
       "types": [
         "normal",
-        null
+        "none"
       ],
       "id": 24
     },
@@ -196,7 +196,7 @@
       "title": "Rattata",
       "types": [
         "normal",
-        null
+        "none"
       ],
       "id": 25
     },
@@ -204,7 +204,7 @@
       "title": "Squirtle",
       "types": [
         "water",
-        null
+        "none"
       ],
       "id": 26
     },
@@ -220,7 +220,7 @@
       "title": "Vulpix",
       "types": [
         "fire",
-        null
+        "none"
       ],
       "id": 28
     },
@@ -228,7 +228,7 @@
       "title": "Wartortle",
       "types": [
         "water",
-        null
+        "none"
       ],
       "id": 29
     },
