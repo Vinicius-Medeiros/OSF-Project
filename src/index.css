@@ -8,22 +8,19 @@
 }
 
 body {
-    background-color: yellow;
+    background: rgb(139,134,242);
+    background: linear-gradient(90deg, rgba(139,134,242,1) 7%, rgba(255,230,5,1) 100%, rgba(0,212,255,1) 100%);
     height: 100%;
 }
 
 .navbar {
-    padding: 20px;
     display: flex;
     align-items: center;
-    max-width: auto;
-    max-height: auto;
-    background-color: yellow;
     height: auto;
     width: auto;
 }
 
-.navbar a{
+.navbar a {
     text-decoration: none;
 }
 
@@ -51,12 +48,6 @@ body {
     padding: 6px;
 }
 
-.home-link:hover {
-    position: relative;
-    top: 4px;
-    color: white;
-}
-
 .add-link {
     text-align: left;
     background-color: rgb(5, 5, 158);
@@ -66,9 +57,8 @@ body {
     padding: 6px;
 }
 
+.home-link:hover,
 .add-link:hover {
-    position: relative;
-    top: 4px;
     color: white;
 }
 
@@ -84,13 +74,22 @@ body {
 .pokemon-title {
     color: yellow;
     text-align: center;
-    border-radius: 8px;
     background-color: rgb(5, 5, 158);
     width: 100%;
 }
 
+.pokedex-symbol {
+    position: absolute;
+    opacity: 0.1;
+    max-width: 215px;
+    left: -20%;
+    top: 15%;
+}
+
+
 .pokeImg {
     padding-top: 10px;
+    width: 120px;
 }
 
 .navbar {
@@ -113,31 +112,37 @@ body {
 }
 
 .Pokemon-List-Preview {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 180px);
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    grid-gap: 20px;
+    grid-gap: 35px;
     padding: 35px;
     background-color: white;
-}
-
-.Pokemon-List-Preview a {
-    text-decoration: none;
 }
 
 .pokemon-card-preview {
     text-align: center;
     border: 2px solid rgb(5, 5, 158);
-    padding-bottom: 30px;
     border-radius: 10px;
-    background-color: lightgray;
+    background-color: #dff9ea;
+    box-shadow: 2px 10px 13px rgb(166 172 199);
+    width: 240px;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.pokemon-card-preview:hover {
-    position: relative;
-    top: -15px;
-    box-shadow: 0px 8px 12px rgb(5, 5, 158);
+.pokemon-card-preview a {
+    text-decoration: none;
 }
+
+.pokemon-details .pokemon-card-preview > a {
+    cursor: initial;
+}
+
 
 .pokemon-types {
     display: flex;
@@ -150,7 +155,12 @@ body {
 }
 
 .pokemon-types-title {
-    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.poke-type__item {
+    text-transform: uppercase;
 }
 
 .pokemon-types-divider {
@@ -308,19 +318,194 @@ body {
     color: white;
 }
 
-.pokemon-details {
+.poke-type__none {
+    color: lightgray;
+}
+
+.pokemon-details,
+.NewPokemon {
     max-width: 1280px;
     margin: 0 auto;
-    padding-bottom: 70px;
     background-color: white;
-    border: 10px solid rgb(5, 5, 158);
+    border-radius: 10px;
+}
+
+.DetailsButtons {
+    padding: 20px;
+}
+
+.pokemon-details-title,
+.NewPokemonTitle {
+    text-align: center;
+    border-bottom: 2px solid rgb(5, 5, 158);
+    padding: 10px 0;
+    font-size: 32px;
+    margin-bottom: 5px;
+    background: rgb(0,212,255);
+    background: linear-gradient(90deg, rgba(0,212,255,1) 7%, rgba(255,230,5,1) 100%, rgba(139,134,242,1) 100%);
+    color: #450d68;
+}
+
+.pokemon-types_container {
+    padding: 10px 5px;
+    min-height: 100px;
+}
+
+.pokemon-details-subtitle {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+}
+
+.CustomizeDetails {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 0;
+}
+
+.CurrentCardPreview,
+.Customized-Pokemon-Card {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+}
+
+.current-pokemon-card,
+.customize-pokemon-card,
+.new-pokemon-card{
+    background-color: rgb(212 222 245);
+    color: black;
+    font-weight: bolder;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+.CustomizePokemonFormName,
+.PokemonFormName {
+    padding-top: 35px;
+    padding-bottom: 10px;
+    display: flex;
+}
+
+.CustomizePokemonFormName-Title,
+.CustomizePokemonFormType-Title,
+.CustomizePokemonFormImg-Title,
+.PokemonFormName-Title,
+.PokemonFormType-Title,
+.PokemonFormImg-Title {
+    color: yellow;
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgb(5, 5, 158);
+    padding: 5px;
+}
+
+.InputCustomizeName,
+.CustomizeSelectButton,
+.Customize-select-file,
+.SelectButton,
+.select-file,
+.PokemonFormInputText {
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    width: 60%;
+}
+
+.InputCustomizeName::placeholder,
+.PokemonFormInputText::placeholder {
+    font-weight: bolder;
+    color: yellow;
+}
+
+.CustomizePokemonFormType,
+.PokemonFormType {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+}
+
+.Customize-select-items,
+.select-items {
+    font-weight: bolder;
+    color: black;
+}
+
+.CustomizePokemonFormImg,
+.PokemonFormImg {
+    padding-top: 10px;
+    display: flex;
+}
+
+.DeleteButton:active,
+.SaveNewCardButton:active,
+.see-changes_button:active,
+.SubmitButton:active,
+.BackButton:active {
+    position: relative;
+    top: 4px;
+}
+
+
+.DeleteButton-Title:hover,
+.SaveNewCardButton-Title:hover,
+.BackButton-Title:hover,
+.SubmitButton:hover {
+    color: white;
+}
+
+.SaveNewCardButton {
+    background-color: rgb(5, 5, 158);
+    color: yellow;
     border-radius: 8px;
 }
 
-.pokemon-details-title {
-    text-align: center;
+.SaveNewCardButton-Title {
+    font-weight: bolder;
     color: yellow;
+}
+
+.submit-see-changes {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.DeleteButton,
+.SaveNewCardButton,
+.BackButton,
+.SubmitButton,
+.see-changes_button {
     background-color: rgb(5, 5, 158);
+    color: yellow;
+    border-radius: 8px;
+    border: none;
+    padding: 10px;
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+.SubmitButton {
+    width: 175px;
+}
+
+.DeleteButton:hover {
+    background-color: rgb(214, 26, 13);
+    cursor: pointer;
+}
+
+.SaveNewCardButton:hover {
+    background-color: rgb(19, 168, 5);
+    cursor: pointer;
+}
+
+.see-changes_button:hover {
+    background-color: rgb(18, 26, 17);
+    cursor: pointer;
 }
 
 .BackButton {
@@ -329,11 +514,15 @@ body {
     color: yellow;
     border-radius: 8px;
     padding: 6px;
+    margin: 20px 0;
+    cursor: pointer;
 }
 
-.BackButton:active {
-    position: relative;
-    top: 4px;
+.pokemon_form-label  {
+    text-align: right;
+    width: 175px;
+    font-weight: bold;
+    margin-right: 5px;
 }
 
 .BackButton-Title {
@@ -341,150 +530,18 @@ body {
     color: yellow;
 }
 
-.BackButton-Title:hover {
+.PokemonFormInputText::placeholder {
+    color: black;
+}
+
+.InputCustomizeName::placeholder {
     color: white;
-}
-
-.NewPokemon {
-    align-content: center;
-    text-align: center;
-    max-width: 1280px;
-    margin: 0 auto;
-    padding-bottom: 70px;
-    background-color: white;
-    border-radius: 20px;
-}
-
-.NewPokemonTitle {
-    color: yellow;
-    text-align: center;
-    border-radius: 8px;
-    background-color: rgb(5, 5, 158);
-    width: 100%;
-}
-
-.PokemonFormName {
-    max-width: 100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    display: flex;
-}
-
-.PokemonFormName-Title {
-    width: 350px;
-    color: yellow;
-    text-align: center;
-    border-radius: 8px;
-    background-color: rgb(5, 5, 158);
-    
-}
-
-.PokemonFormInputText {
-    font-weight: bolder;
-    color: yellow;
-    text-align: center;
-    border-radius: 20px;
-    background-color: rgb(5, 5, 158);
-    max-width: 150px;
-}
-
-.PokemonFormType {
-    max-width: 100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    display: flex;
-}
-
-.PokemonFormType-Title {
-    width: 350px;
-    color: yellow;
-    text-align: center;
-    border-radius: 8px;
-    background-color: rgb(5, 5, 158);
-}
-
-.SelectButton {
-    width: 150px;
-    text-align: center;
-    font-weight: bolder;
-    color: yellow;
-    background-color: rgb(5, 5, 158);
-    border-radius: 20px;
-}
-
-.select-items {
-    font-weight: bolder;
-    color: yellow;
-}
-
-.PokemonFormType2 {
-    max-width: 100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    display: flex;
-}
-
-.PokemonFormType2-Title {
-    width: 350px;
-    color: yellow;
-    text-align: center;
-    border-radius: 8px;
-    background-color: rgb(5, 5, 158);
-}
-
-.PokemonFormImg {
-    max-width: 100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    display: flex;
-}
-
-.PokemonFormImg-Title {
-    width: 350px;
-    color: yellow;
-    text-align: center;
-    border-radius: 8px;
-    background-color: rgb(5, 5, 158);
-}
-
-.select-file {
-    width: 320px;
-    font-weight: bolder;
-    color: yellow;
-    border-radius: 15px;
-    background-color: rgb(5, 5, 158);
+    opacity: 0.9;
 }
 
 .Submit {
-    max-width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
-    display: flex;
-}
-
-.SubmiteButton-Title {
-    width: 350px;
-    color: yellow;
-    text-align: center;
-    border-radius: 8px;
-    background-color: rgb(5, 5, 158);
-}
-
-.SubmitButton {
-    width: 150px;
-    font-weight: bolder;
-    color: yellow;
-    border-radius: 15px;
-    background-color: rgb(5, 5, 158);
-}
-
-.SubmitButton:hover {
-    color: white;
-}
-
-.SubmitButton:active {
-    position: relative;
-    top: 4px;
 }
 
 .PreviewNewCard-Title {
