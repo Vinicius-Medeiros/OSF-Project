@@ -9,15 +9,11 @@ const Downbar = () => {
     }
 
     return (
-        <nav className="navbar">
-            <div className = "imgNavbar">
-            </div>
-            <form>
+        <div className="navbar">
                 <button className="BackButton" type="button" onClick={goBack}>
                     <h3 className="BackButton-Title">VOLTAR</h3>
                 </button>
-            </form>
-        </nav>
+        </div>
         );
     }
     

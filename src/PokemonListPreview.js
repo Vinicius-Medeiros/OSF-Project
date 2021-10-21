@@ -5,7 +5,9 @@ const PokemonListPreview = ({pokemons}) => {
     return (
         <div className="Pokemon-List-Preview">
             {pokemons.map((pokemon) => (
-                    <PokemonCard pokemon={pokemon}/>
+                <div key={pokemon.id}>
+                <PokemonCard pokemon={pokemon}/>
+                </div>
             ))}
         </div>
     );

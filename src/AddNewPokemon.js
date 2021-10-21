@@ -15,8 +15,8 @@ const AddNewPokemon = () => {
         e.preventDefault();
         types[0]= type1;
         types[1]= type2;
-        if (types[1] === "none") {
-            types[1] = null;
+        if (types[1] === '') {
+            types[1] = "none"
         }
         const pokemon = { title, types }
 
@@ -53,46 +53,36 @@ const AddNewPokemon = () => {
             <form onSubmit={handleSubmit}>
 
                 <div className="PokemonFormName">
-                    <h2 className="PokemonFormName-Title">Enter the pokemon name:</h2>
-                    &nbsp;&nbsp;
+                    <label className="pokemon_form-label CustomizePokemonFormName-Title">Enter the pokemon name:</label>
                     <input className="PokemonFormInputText" required type="text" value={title} onChange={(e) => setTitle(e.target.value)} name="pokemonName" placeholder="Pokemon name..." />
                 </div>
 
                 <div className="PokemonFormType">
-                    <h2 className="PokemonFormType-Title">Select the pokemon main type:</h2>
-                    &nbsp;&nbsp;
-                    <select className="SelectButton" required name="types1" onChange={(e) => setType1(e.target.value)}>
-                        {types1.map((type1, i) => {
-                            if (i === 0) {
-                                return <option className="select-items" value="" disabled selected>Type:</option>
-                            }
-                            return <option className="select-items" value={type1.toLowerCase()}>{type1}</option>
+                    <label className="pokemon_form-label CustomizePokemonFormName-Title">Select the pokemon main type:</label>
+                    <select className="SelectButton" defaultValue="" required name="types1" onChange={(e) => setType1(e.target.value)}>
+                        <option className="select-items" value="" disabled key={0}>Type:</option>
+                        {types1.map((type1) => {
+                            return <option className="select-items" value={type1.toLowerCase()} key={type1}>{type1}</option>
                         })}
                     </select>
                 </div>
 
-                <div className="PokemonFormType2">
-                    <h2 className="PokemonFormType2-Title">Select the pokemon secondary type:</h2>
-                        &nbsp;&nbsp;
-                        <select className="SelectButton" name="types2" onChange={(e) => setType2(e.target.value)}>
-                            {types2.map((type2, i) => {
-                                if (i === 0) {
-                                    return <option className="select-items" value="" disabled selected>Type:</option>
-                                }
-                                return <option className="select-items" value={type2.toLowerCase()}>{type2}</option>
-                            })}
-                        </select>
+                <div className="PokemonFormType">
+                    <label className="pokemon_form-label CustomizePokemonFormName-Title">Select the pokemon secondary type:</label>
+                    <select className="SelectButton" defaultValue="" name="types2" onChange={(e) => setType2(e.target.value)}>
+                        <option className="select-items" value="" disabled key={0}>Type:</option>
+                        {types2.map((type2) => {
+                            return <option className="select-items" value={type2.toLowerCase()} key={type2}>{type2}</option>
+                        })}
+                    </select>
                 </div>
 
                 <div className="PokemonFormImg">
-                    <h2 className="PokemonFormImg-Title">Select the pokemon image:</h2>
-                    &nbsp;&nbsp;
+                    <label className="pokemon_form-label CustomizePokemonFormName-Title">Select the pokemon image:</label>
                     <input className="select-file" type="file"/>
                 </div>
 
                 <div className="Submit">
-                    <h2 className="SubmiteButton-Title">Click on "SUBMIT" to add the new pokemon:</h2>
-                    &nbsp;&nbsp;
                     { !isPending && <button className="SubmitButton" type="submit">ADD POKEMON</button>}
                     { isPending && <button className="SubmitButton" type="submit" disabled >ADDING POKEMON...</button>}
                 </div>
