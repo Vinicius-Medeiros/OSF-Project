@@ -62,15 +62,6 @@ body {
     color: white;
 }
 
-.home-title {
-    text-align: center;
-    background-color: rgb(5, 5, 158);
-    color: yellow;
-    border-radius: 8px;
-    height: auto;
-    width: auto;
-}
-
 .pokemon-title {
     color: yellow;
     text-align: center;
@@ -95,20 +86,6 @@ body {
 .navbar {
     max-width: 1280px;
     margin: 0 auto;
-}
-
-.home {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding-bottom: 70px;
-}
-
-.msgLoading {
-    text-align: center;
-    color: yellow;
-    border-radius: 8px;
-    background-color: rgb(5, 5, 158);
-    width: 100%;
 }
 
 .Pokemon-List-Preview {
@@ -323,6 +300,7 @@ body {
 }
 
 .pokemon-details,
+.home,
 .NewPokemon {
     max-width: 1280px;
     margin: 0 auto;
@@ -335,6 +313,8 @@ body {
 }
 
 .pokemon-details-title,
+.home-title,
+.msgLoading,
 .NewPokemonTitle {
     text-align: center;
     border-bottom: 2px solid rgb(5, 5, 158);
@@ -457,12 +437,6 @@ body {
 .BackButton-Title:hover,
 .SubmitButton:hover {
     color: white;
-}
-
-.SaveNewCardButton {
-    background-color: rgb(5, 5, 158);
-    color: yellow;
-    border-radius: 8px;
 }
 
 .SaveNewCardButton-Title {
