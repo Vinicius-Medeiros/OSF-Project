@@ -9,7 +9,7 @@ const PokemonCard = ({pokemon}) => {
                 {pokemon.title}
             </h3>
             <Link className="Link-pokemonCard_details" to={ `/pokemons/${pokemon.id}` }> 
-            <img className="pokeImg" src={ pokemon.title ? "/images/pokemonImages/" + pokemon.title + ".png" : "/images/pokemonImages/undefined.png"} alt= {pokemon.title + " image"}/>
+            <img className="pokeImg" src={ pokemon.title ? "/images/allPokemonsImages/" + pokemon.title + ".png" : "/images/pokemonImages/undefined.png"} alt= {pokemon.title + " image"}/>
             <hr className="pokemon-types-title-divider"/>
             <div className="pokemon-types_container">
                 <h4 className="pokemon-types-title">
